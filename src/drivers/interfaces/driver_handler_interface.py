@@ -10,3 +10,7 @@ class DriverHandlerInterface(ABC):
     @abstractmethod
     def variance(self, number: List[float]) -> float:
         pass
+
+    @abstractmethod
+    def media(self, numbers: List[float]) -> float:
+        pass

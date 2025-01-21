@@ -1,5 +1,5 @@
-from calculator_3 import Calculator3
 from typing import Dict, List
+from .calculator_3 import Calculator3
 from pytest import raises
 
 
@@ -24,7 +24,7 @@ def test_calculate_with_variance_error():
     with raises(Exception) as excinfo:
         calculator_3.calculate(mock_request)
 
-    assert str(excinfo.value) == 'Falha no processo: Variância menor que multiplicação'
+    assert str(excinfo.value) == "Falha no processo: Variância menor que multiplicação"
 
 
 def test_calculate():
@@ -33,9 +33,10 @@ def test_calculate():
 
     response = calculator_3.calculate(mock_request)
 
-    assert response == {'data': {
-        'Calculator': 3,
-        'value': 1000000,
-        'Success': True,
+    assert response == {
+        "data": {
+            "Calculator": 3,
+            "value": 1000000,
+            "Success": True,
         }
     }
